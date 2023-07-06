@@ -19,7 +19,9 @@ pipeline{
       // }
     }
     stage("pushing to artifact"){
+      steps{
       sh "sudo cp target/*.war /opt/tomcat-*/webapps"
+      }
     }
   }
 }
