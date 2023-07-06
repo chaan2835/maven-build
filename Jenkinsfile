@@ -17,9 +17,9 @@ pipeline{
           archiveArtifacts artifacts: "**/target/*.war"
         }
       }
-      stage("pushing to artifact"){
-        sudo cp target/*.war /opt/tomcat-*/webapps
-      }
+    }
+    stage("pushing to artifact"){
+      sudo cp target/*.war /opt/tomcat-*/webapps
     }
   }
 }
