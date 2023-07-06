@@ -19,7 +19,7 @@ pipeline{
       }
     }
     stage("pushing to artifact"){
-      sudo cp target/*.war /opt/tomcat-*/webapps
+      sh "sudo cp target/*.war /opt/tomcat-*/webapps"
     }
   }
 }
